@@ -37,3 +37,10 @@ banner.click()
 
 print("banner access")
 driver.switch_to.window(driver.window_handles[1])
+
+student_services=driver.find_element("xpath", 
+                                     "//a[@href='/prod/twbkwbis.P_GenMenu?name=bmenu.P_StuMainMnu']")
+
+
+student_services.click()
+print("access to student services")
