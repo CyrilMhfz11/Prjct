@@ -111,3 +111,11 @@ for row in rows:
     for cell in cells:
         row_data.append(cell.text)
     data.append(row_data)
+
+file = "Courses.csv"
+with open(file, "w", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow(headers)
+    writer.writerows(data)
+
+driver.close()
