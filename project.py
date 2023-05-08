@@ -65,3 +65,8 @@ dropdown_button=driver.find_element("xpath",
 
 dropdown_button.click()
 print("selection of the term done")
+
+advance_s_but=driver.find_element("xpath",
+                                  "//input[@type='submit' and @name='SUB_BTN' and @value='Advanced Search']")
+advance_s_but.click()
+print("advanced clicked")
