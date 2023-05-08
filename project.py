@@ -70,3 +70,20 @@ advance_s_but=driver.find_element("xpath",
                                   "//input[@type='submit' and @name='SUB_BTN' and @value='Advanced Search']")
 advance_s_but.click()
 print("advanced clicked")
+
+subject_path=driver.find_element("xpath",
+                                 "//select[@name='sel_subj' and @size='10']")
+subject_menu=Select(subject_path)
+subject_menu.select_by_value('CSC')
+
+campus_path=driver.find_element("xpath",
+                           "//select[@name='sel_camp']")
+campus=Select(campus_path)
+campus_option=campus.options[0]
+driver.execute_script("arguments[0].setAttribute('disabled','disabled')", campus_option)
+campus.select_by_index(2)
+
+
+selection_search_but=driver.find_element("xpath",
+                                         "//input[@type='submit' and @name='SUB_BTN']")
+selection_search_but.click()
