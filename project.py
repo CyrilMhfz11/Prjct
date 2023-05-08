@@ -87,3 +87,14 @@ campus.select_by_index(2)
 selection_search_but=driver.find_element("xpath",
                                          "//input[@type='submit' and @name='SUB_BTN']")
 selection_search_but.click()
+print("selection completed")
+
+headers=[]
+data=[]
+
+#for the headers
+heads=driver.find_element("xpath","//table[contains(@class, 'datadisplaytable')]")
+head1=heads.find_elements("xpath","//th[contains(@class, 'ddheader')]")
+
+for head in head1:
+    headers.append(head.text)
