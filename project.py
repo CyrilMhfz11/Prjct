@@ -49,3 +49,8 @@ registration_input=driver.find_element("xpath",
                                        "//a[@href='/prod/twbkwbis.P_GenMenu?name=bmenu.P_RegMnu']")
 registration_input.click()
 print("registration acccessed")
+
+look_up_input=driver.find_element("xpath",
+                                  "//a[@href='/prod/bwskfcls.p_sel_crse_search']")
+look_up_input.click()
+print("look up classes accessed")
