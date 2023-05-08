@@ -98,3 +98,16 @@ head1=heads.find_elements("xpath","//th[contains(@class, 'ddheader')]")
 
 for head in head1:
     headers.append(head.text)
+
+#for the data
+table=driver.find_element("xpath","//table[contains(@class, 'datadisplaytable')]")
+
+rows=table.find_elements("xpath",".//tr")
+
+for row in rows:
+    cells=row.find_elements("xpath",".//td")
+    
+    row_data = []
+    for cell in cells:
+        row_data.append(cell.text)
+    data.append(row_data)
