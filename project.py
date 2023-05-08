@@ -44,3 +44,8 @@ student_services=driver.find_element("xpath",
 
 student_services.click()
 print("access to student services")
+
+registration_input=driver.find_element("xpath",
+                                       "//a[@href='/prod/twbkwbis.P_GenMenu?name=bmenu.P_RegMnu']")
+registration_input.click()
+print("registration acccessed")
