@@ -54,3 +54,14 @@ look_up_input=driver.find_element("xpath",
                                   "//a[@href='/prod/bwskfcls.p_sel_crse_search']")
 look_up_input.click()
 print("look up classes accessed")
+
+dropdown_path=driver.find_element("xpath",
+                                  "//select[@name='p_term']")
+dropdown_menu=Select(dropdown_path)
+dropdown_menu.select_by_value('202410')
+
+dropdown_button=driver.find_element("xpath",
+                                    "//input[@type='submit' and @value='Submit']")
+
+dropdown_button.click()
+print("selection of the term done")
