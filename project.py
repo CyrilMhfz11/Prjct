@@ -29,3 +29,11 @@ password_input.send_keys(password)
 button_input.click()
 
 print("logged in")
+
+banner=driver.find_element("xpath",
+                           "//a[@href='https://banweb.lau.edu.lb/' and @target='_blank']")
+
+banner.click()
+
+print("banner access")
+driver.switch_to.window(driver.window_handles[1])
